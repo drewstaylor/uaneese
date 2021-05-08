@@ -21,6 +21,7 @@ def main():
   targ = targ.replace("est", "es")
   targ = targ.replace(",", "")
   targ = targ.replace(".", "")
+  targ = targ.lower()
   if s in targ:
     prev_c = ""
     i = 0
