@@ -19,8 +19,6 @@ def chunks(lst, n):
 def main():
   targ = sys.argv[1]
   targ = targ.replace("est", "es")
-  targ = targ.replace(",", "")
-  targ = targ.replace(".", "")
   targ = targ.lower()
   if s in targ:
     prev_c = ""
@@ -53,7 +51,10 @@ def main():
     in_f = ''
     targ_i = chunks(targ_i, 2)
     for c in targ_i:
-      in_f += g[c]
+      if c == ' ' or c == ',' or c == '.' or c == ':' or c == ';' or c == '/' or c == '\\' or c == '=' or c == '*' or c == '`' or c == '(' or c == ')' or c == '[' or c == ']' or c == '-' or c == '—' or c == '?' or c == '!' or c == '+' or c == '"' or c == "'":
+        in_f += c
+      else:
+        in_f += g[c]
     out_a.append(in_f)
   
   out_f = " ".join(out_a)
