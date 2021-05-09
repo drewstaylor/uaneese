@@ -29,7 +29,7 @@ def main():
       ccast = False
       i += 1
       continue
-    elif c == ' ' or c == ',' or c == '.' or c == ':' or c == ';':
+    elif c == ' ' or c == ',' or c == '.' or c == ':' or c == ';' or c == '/' or c == '\\' or c == '=' or c == '*' or c == '`' or c == '(' or c == ')' or c == '[' or c == ']' or c == '-' or c == '—' or c == '?' or c == '!' or c == '+' or c == '"' or c == "'":
       out_f += c
     elif c == a and targ[i+1] == e:
       out_f += g['ae']
