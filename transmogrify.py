@@ -31,6 +31,8 @@ def main():
       continue
     elif c == ' ' or c == ',' or c == '.' or c == ':' or c == ';' or c == '/' or c == '\\' or c == '=' or c == '*' or c == '`' or c == '(' or c == ')' or c == '[' or c == ']' or c == '-' or c == '—' or c == '?' or c == '!' or c == '+' or c == '"' or c == "'":
       out_f += c
+    elif i+1 == len(targ):
+      out_f += g[c]
     elif c == a and targ[i+1] == e:
       out_f += g['ae']
       ccast = True
