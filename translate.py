@@ -51,10 +51,13 @@ def main():
     in_f = ''
     targ_i = chunks(targ_i, 2)
     for c in targ_i:
-      if c == ' ' or c == ',' or c == '.' or c == ':' or c == ';' or c == '/' or c == '\\' or c == '=' or c == '*' or c == '`' or c == '(' or c == ')' or c == '[' or c == ']' or c == '-' or c == '—' or c == '?' or c == '!' or c == '+' or c == '"' or c == "'":
+      if c.isnumeric() or c == ' ' or c == ',' or c == '.' or c == ':' or c == ';' or c == '/' or c == '\\' or c == '=' or c == '*' or c == '`' or c == '(' or c == ')' or c == '[' or c == ']' or c == '-' or c == '—' or c == '?' or c == '!' or c == '+' or c == '"' or c == "'":
         in_f += c
       else:
-        in_f += g[c]
+        if c in g:
+          in_f += g[c]
+        else:
+          in_f += c
     out_a.append(in_f)
   
   out_f = " ".join(out_a)
